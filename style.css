@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Rubik+Wet+Paint&family=Ruslan+Display&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+html,body{
+    min-height: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+.main{
+    background-image: url(img/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.5s;
+    
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+}
+.header__darc-mode{
+    position: absolute;
+    width: 50px;
+    height: 26px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    cursor: pointer;
+    margin-top: 15px;
+}
+.header__darc-mode::before{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.header__darc-mode.active::before{
+    left: 24px;
+    background: #b170fc;
+}
+
+.main.active{
+    background: #fff;
+    background-image: url(img/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.timer__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.timer{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+.timer__bloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+span{
+    font-size: 35px;
+}
+.timer__title{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media (max-width: 650px){
+    .timer__title{
+        font-size: 20px;
+    }
+    .timer{
+        gap: 10px;
+    }
+    .timer__bloc{
+        font-size: 20px;
+        padding: 10px 10px;
+       
+    }
+    span{
+        font-size: 16px;
+    }
+    
+   
+}
+
+    
